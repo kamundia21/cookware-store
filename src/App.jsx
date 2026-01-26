@@ -10,7 +10,7 @@ import { ProductDetail } from './pages/ProductDetail/ProductDetail';
 import { CartPage } from './pages/Cart/CartPage';
 import { Login } from './pages/Login/Login';
 import { Register } from './pages/Register/Register';
-import { AdminPanel } from './pages/AdminPanel/AdminPanel';
+import { AdminPanel } from './pages/Adminpanel/AdminPanel';
 import { AdminGuard } from './components/AdminGuard/AdminGuard';
 import { CareTips } from './pages/CareTips/CareTips';
 import { Shipping } from './pages/Shipping/Shipping';
