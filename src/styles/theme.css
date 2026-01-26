@@ -1,0 +1,271 @@
+/* ============================================
+   FUTURISTIC THEME - Blue & White Design
+   Modern, User-Friendly UI with Glassmorphism
+   ============================================ */
+
+:root {
+  /* Primary Colors - Modern Blue Palette */
+  --primary-blue: #3498db;
+  --primary-dark: #2980b9;
+  --primary-light: #5dade2;
+  --primary-lighter: #d6eaf8;
+  
+  /* Secondary Colors - White & Neutrals */
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --light-gray: #ecf0f1;
+  --medium-gray: #bdc3c7;
+  --dark-gray: #7f8c8d;
+  --darker-gray: #2c3e50;
+  
+  /* Accent Colors */
+  --success: #27ae60;
+  --success-light: #d5f4e6;
+  --danger: #e74c3c;
+  --danger-light: #fadbd8;
+  --warning: #f39c12;
+  --warning-light: #fdebd0;
+  --info: #3498db;
+  --info-light: #d6eaf8;
+  
+  /* Gradients - Futuristic */
+  --gradient-primary: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  --gradient-primary-light: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+  --gradient-success: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+  --gradient-danger: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  --gradient-soft: linear-gradient(135deg, #ecf0f1 0%, #f8f9fa 100%);
+  --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  
+  /* Glassmorphism */
+  --glass-light: rgba(255, 255, 255, 0.7);
+  --glass-medium: rgba(52, 152, 219, 0.1);
+  --glass-dark: rgba(44, 62, 80, 0.1);
+  --glass-blur: 10px;
+  
+  /* Shadows - Layered Depth */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.2);
+  --shadow-blue: 0 8px 32px rgba(52, 152, 219, 0.2);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  
+  /* Border Radius - Modern */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* Spacing - Consistent Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-code: 'Monaco', 'Courier New', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Transitions - Smooth Animations */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 100;
+  --z-fixed: 1000;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(52, 152, 219, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.glass {
+  background: var(--glass-light);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(44, 62, 80, 0.7);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.gradient-success {
+  background: var(--gradient-success);
+  color: white;
+}
+
+.gradient-danger {
+  background: var(--gradient-danger);
+  color: white;
+}
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-blue { box-shadow: var(--shadow-blue); }
+
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+.smooth-transition {
+  transition: all var(--transition-base);
+}
+
+.smooth-transition-fast {
+  transition: all var(--transition-fast);
+}
+
+.smooth-transition-slow {
+  transition: all var(--transition-slow);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Mobile: 320px - 480px */
+/* Tablet: 481px - 768px */
+/* Desktop: 769px and above */
+/* Large Desktop: 1024px and above */

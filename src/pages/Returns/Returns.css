@@ -1,0 +1,71 @@
+.page-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1976d2;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: #424242;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.returns-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+  text-align: center;
+}
+
+.step svg {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.return-process {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.return-process ol {
+  padding-left: 1.5rem;
+}
+
+.return-process li {
+  margin-bottom: 0.5rem;
+  color: #424242;
+}
+
+.return-process a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+}

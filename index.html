@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d47a1" />
+    <meta name="description" content="Advenco Global - Premium Kitchen Store with cookware, knives, plates, and more" />
+    <meta name="keywords" content="cookware, kitchenware, kitchen supplies, plates, knives" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Advenco Global" />
+    <title>Advenco Global - Premium Kitchen Store</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1976d2" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register service worker for PWA functionality
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registered successfully:', registration);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed:', error);
+            });
+        });
+
+        // Prompt for updates
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          console.log('Install prompt available');
+        });
+
+        // Handle app installation
+        window.addEventListener('appinstalled', () => {
+          console.log('App installed');
+          deferredPrompt = null;
+        });
+      }
+    </script>
+  </body>
+</html>

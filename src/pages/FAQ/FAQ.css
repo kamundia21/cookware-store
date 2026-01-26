@@ -1,0 +1,72 @@
+.page-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1976d2;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #0d47a1;
+  margin-bottom: 2rem;
+}
+
+.faq-list {
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.faq-item p {
+  color: #424242;
+  line-height: 1.6;
+}
+
+.contact-help {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1976d2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #0d47a1;
+}

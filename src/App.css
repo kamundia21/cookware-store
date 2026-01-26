@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import './styles/theme.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+  color: var(--darker-gray);
+  line-height: var(--line-height-normal);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--spacing-lg) 0;
+}
+
+/* ============================================
+   CONTAINERS & LAYOUTS
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-glass {
+  background: var(--glass-light);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+/* ============================================
+   GRID SYSTEM
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+
+/* Base mobile styles */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .main-content {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* General layout */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .filters-container {
+    flex-direction: column;
+  }
+  
+  .product-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-to-cart-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  /* Typography responsive */
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+  
+  /* Products grid mobile */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+    gap: 0.75rem;
+  }
+  
+  /* Cart panel mobile */
+  .cart-panel {
+    width: 100% !important;
+    max-width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  /* Modal mobile */
+  .modal-content {
+    width: 95%;
+    margin: auto;
+    border-radius: 12px;
+  }
+  
+  /* Padding optimization */
+  .container, section, main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  /* Touch-friendly spacing */
+  button, a, input {
+    min-height: 44px;
+  }
+}
+
+/* Tablet styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+    gap: 1rem;
+  }
+  
+  .hero-content {
+    flex-direction: row;
+  }
+}
+
+/* Desktop styles (1024px+) */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 1.5rem;
+  }
+}
+
+/* ===== ACCESSIBILITY & PERFORMANCE ===== */
+
+/* Touch-friendly buttons */
+button,
+.icon-button,
+.btn,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active,
+.icon-button:active {
+  opacity: 0.8;
+}
+
+/* Fast image loading */
+img {
+  content-visibility: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input optimization */
+input,
+textarea,
+select {
+  font-size: 16px; /* Prevents zoom on iOS */
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #0d47a1;
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+/* ===== ORIENTATION FIXES ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero-section {
+    min-height: auto;
+    padding: 20px 0;
+  }
+  
+  header {
+    min-height: auto;
+  }
+}
+
+/* ===== NOTCH/SAFE AREA SUPPORT ===== */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  .header-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .modal-content,
+  .card,
+  input {
+    background: #2a2a2a;
+    color: #f0f0f0;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

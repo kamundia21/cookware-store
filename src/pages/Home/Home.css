@@ -1,0 +1,361 @@
+/* Home Page Styles */
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 200px);
+}
+
+.bestsellers,
+.new-arrivals {
+  margin-bottom: 4rem;
+  animation: slideInUp 0.6s ease;
+}
+
+.bestsellers h2,
+.new-arrivals h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Season Bundles Preview */
+.season-bundles-preview {
+  margin-bottom: 4rem;
+  animation: slideInUp 0.6s ease;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.preview-header h2 {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  font-weight: 700;
+}
+
+.preview-header p {
+  color: #7f8c8d;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Loyalty Program Preview */
+.loyalty-preview {
+  margin-bottom: 4rem;
+  animation: slideInUp 0.6s ease;
+}
+
+.loyalty-preview-card {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.08) 0%, rgba(41, 128, 185, 0.08) 100%);
+  border: 1px solid rgba(52, 152, 219, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.1);
+  transition: all 0.3s ease;
+}
+
+.loyalty-preview-card:hover {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.12) 0%, rgba(41, 128, 185, 0.12) 100%);
+  border-color: rgba(52, 152, 219, 0.3);
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.15);
+}
+
+.loyalty-content h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.loyalty-content > p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.loyalty-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.highlight svg {
+  color: #3498db;
+  flex-shrink: 0;
+}
+
+.loyalty-user-info {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.user-tier,
+.user-points {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.loyalty-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.loyalty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.loyalty-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loyalty-badge {
+  font-size: 6rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Trust Section */
+.trust-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  margin: 3rem 0;
+  border-top: 1px solid rgba(52, 152, 219, 0.1);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.trust-item {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trust-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(52, 152, 219, 0.3);
+  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.15);
+  transform: translateY(-4px);
+}
+
+.trust-item svg {
+  width: 32px;
+  height: 32px;
+  color: #3498db;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.trust-item:hover svg {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.trust-item h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.trust-item p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float span {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  background: #25d366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.whatsapp-float:hover span {
+  opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .loyalty-preview-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .loyalty-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .loyalty-badge {
+    font-size: 4rem;
+  }
+
+  .preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .view-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .trust-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .trust-item {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bestsellers h2,
+  .new-arrivals h2 {
+    font-size: 1.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trust-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .loyalty-preview-card {
+    padding: 1.5rem;
+  }
+
+  .loyalty-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+}

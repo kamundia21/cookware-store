@@ -1,0 +1,57 @@
+.page-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1976d2;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #0d47a1;
+  margin-bottom: 2rem;
+}
+
+.warranty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.warranty-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+  text-align: center;
+}
+
+.warranty-card svg {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.warranty-card h2 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.support-contact {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.support-contact a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+}

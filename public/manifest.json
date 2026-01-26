@@ -1,0 +1,84 @@
+{
+  "name": "Advenco Global Cookware Store",
+  "short_name": "Cookware Store",
+  "description": "Premium cookware and kitchen knives online store",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1976d2",
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "/Image/screenshot-mobile.png",
+      "sizes": "540x720",
+      "form_factor": "narrow",
+      "type": "image/png"
+    },
+    {
+      "src": "/Image/screenshot-tablet.png",
+      "sizes": "1024x768",
+      "form_factor": "wide",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/Image/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Image/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Image/icon-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["shopping"],
+  "shortcuts": [
+    {
+      "name": "View Cookware",
+      "short_name": "Cookware",
+      "description": "Browse our cookware collection",
+      "url": "/category/cookware",
+      "icons": [
+        {
+          "src": "/Image/cookware-shortcut.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Knives",
+      "short_name": "Knives",
+      "description": "Browse our knives collection",
+      "url": "/category/knives",
+      "icons": [
+        {
+          "src": "/Image/knives-shortcut.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Shopping Cart",
+      "short_name": "Cart",
+      "description": "View your shopping cart",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/Image/cart-shortcut.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
