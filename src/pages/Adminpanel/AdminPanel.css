@@ -18,11 +18,43 @@
   gap: 20px;
 }
 
+.admin-title-section {
+  flex: 1;
+}
+
 .admin-panel h1 {
   color: #2c3e50;
-  margin: 0;
+  margin: 0 0 0.75rem 0;
   font-size: 2rem;
-  flex: 1;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  background: #f0f0f0;
+  color: #555;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #e0e0e0;
+}
+
+.tab-btn.active {
+  background: white;
+  color: #1976d2;
+  border-bottom-color: #1976d2;
 }
 
 .logout-btn {
@@ -364,6 +396,85 @@
   cursor: not-allowed;
 }
 
+  /* Employee Management Styles */
+  .employees-list-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #f0f0f0;
+  }
+
+  .employees-list-section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .no-employees {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  .employees-table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .employees-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+
+  .employees-table th {
+    background: #f8f9fa;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .employees-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+  }
+
+  .employees-table tbody tr:hover {
+    background: #f9f9f9;
+  }
+
+  .delete-employee-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .delete-employee-btn:hover:not(:disabled) {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+  }
+
+  .delete-employee-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
 @media (max-width: 768px) {
   .products-table {
     font-size: 0.85rem;
@@ -385,6 +496,24 @@
   }
 
   .delete-product-btn svg {
+    display: none;
+  }
+
+  .employees-table {
+    font-size: 0.85rem;
+  }
+
+  .employees-table th,
+  .employees-table td {
+    padding: 0.75rem;
+  }
+
+  .delete-employee-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .delete-employee-btn svg {
     display: none;
   }
 }
