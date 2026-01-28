@@ -1,6 +1,6 @@
 import { useProducts } from '../../context/ProductContext';
 import { supabase } from '../../utils/supabaseClient';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Trash2 } from 'lucide-react';
 import './AdminPanel.css';
@@ -25,6 +25,7 @@ export function AdminPanel() {
   const { addProduct, deleteProduct, products } = useProducts();
   const navigate = useNavigate();
   const [newProduct, setNewProduct] = useState({
+      // Session check: Only allow authenticated users
     name: '',
     price: '',
     category_slug: 'cookware',
@@ -33,6 +34,15 @@ export function AdminPanel() {
     discount: 0,
     trending: false
   });
+    useEffect(() => {
+      async function checkSession() {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+          navigate('/login');
+        }
+      }
+      checkSession();
+    }, [navigate]);
   const [newEmployee, setNewEmployee] = useState({
     full_name: '',
     email: '',
@@ -266,12 +276,13 @@ export function AdminPanel() {
           <span>Logout</span>
         </button>
       </div>
-      
-      {message.text && (
-        <div className={`message ${message.type}`}>
-          {message.text}
-        </div>
-      )}
+
+      <div style={{ padding: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
+        {message.text && (
+          <div className={`message ${message.type}`}>
+            {message.text}
+          </div>
+        )}
 
       {activeTab === 'products' && (
         <>
@@ -579,6 +590,7 @@ export function AdminPanel() {
           </section>
         </>
       )}
+      </div>
     </div>
   );
 }

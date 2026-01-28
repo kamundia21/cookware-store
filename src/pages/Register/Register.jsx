@@ -58,7 +58,34 @@ export function Register() {
       // Store user role
       localStorage.setItem('userRole', userRole);
       localStorage.setItem('userId', data.user.id);
-      
+
+      // Check for valid session before inserting into table
+      const { data: sessionData } = await supabase.auth.getSession();
+      if (!sessionData.session) {
+        setMessage({ type: 'error', text: 'Registration succeeded, but you must verify your email and log in before your info can be saved.' });
+        setLoading(false);
+        return;
+      }
+
+      // Insert into the appropriate table
+      const table = userRole === 'buyer' ? 'buyers' : 'employees';
+      const { error: insertError } = await supabase
+        .from(table)
+        .insert([
+          {
+            id: data.user.id,
+            name: formData.fullName,
+            email: formData.email,
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (insertError) {
+        setMessage({ type: 'error', text: `Registration succeeded but failed to save user info: ${insertError.message}` });
+        setLoading(false);
+        return;
+      }
+
       setMessage({ 
         type: 'success', 
         text: `Registration successful as ${userRole}! Check your email for confirmation link.` 

@@ -12,36 +12,7 @@ export function Footer() {
         <div className="footer-main">
           <div className="container">
             {/* Trust Signals Section */}
-            <div className="trust-bar">
-              <div className="trust-item">
-                <Shield size={32} />
-                <div>
-                  <h4>Secure Payment</h4>
-                  <p>M-Pesa & Cards Accepted</p>
-                </div>
-              </div>
-              <div className="trust-item">
-                <Truck size={32} />
-                <div>
-                  <h4>2-Hour Delivery</h4>
-                  <p>Nairobi & Surrounds</p>
-                </div>
-              </div>
-              <div className="trust-item">
-                <RefreshCw size={32} />
-                <div>
-                  <h4>Easy Returns</h4>
-                  <p>7-Day Guarantee</p>
-                </div>
-              </div>
-              <div className="trust-item">
-                <Star size={32} />
-                <div>
-                  <h4>4.8/5 Rating</h4>
-                  <p>10,000+ Reviews</p>
-                </div>
-              </div>
-            </div>
+            
 
             {/* Footer Content */}
             <div className="footer-content">
